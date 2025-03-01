@@ -54,8 +54,8 @@ export default class Buildbotics {
         };
       }
 
-    send() {
-      if (this.sock) {this.sock.send('$0homed=0');}
+    send(msg: string) {
+      if (this.sock) {this.sock.send(msg);}
     }
 
     is_object = (o: any) => {return o !== null && typeof o === 'object';};
